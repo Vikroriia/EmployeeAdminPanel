@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="785c2309-d4e9-4db6-b831-83cdf0c7c181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="785c2309-d4e9-4db6-b831-83cdf0c7c181" name="Default Changelist" comment="Add DB_FR for employees(position_id) and new variable Position_id + 2 + 2 functions for it (get and set)">
+      <change afterPath="$PROJECT_DIR$/src/Entity/Employees.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Positions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190817221301.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190818163748.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190818184224.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190818190315.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190818191715.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190818192036.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190818192314.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20190818193019.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/EmployeesRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/PositionsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +45,37 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - DBEmployeeAdminPanel@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - DBEmployeeAdminPanel@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - DBEmployeeAdminPanel@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="DBEmployeeAdminPanel: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - DBEmployeeAdminPanel@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="DBEmployeeAdminPanel: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="employees: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - DBEmployeeAdminPanel@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="DBEmployeeAdminPanel: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="migration_versions: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="Git.Settings">
@@ -183,6 +226,11 @@
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7bd0428e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7bd0428e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@305cf435" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
           </expand>
           <select />
         </treeState>
@@ -199,7 +247,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566068868320</updated>
-      <workItem from="1566068871926" duration="6220000" />
+      <workItem from="1566068871926" duration="18264000" />
     </task>
     <servers />
   </component>
@@ -216,5 +264,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add DB_FR for employees(position_id) and new variable Position_id + 2 + 2 functions for it (get and set)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add DB_FR for employees(position_id) and new variable Position_id + 2 + 2 functions for it (get and set)" />
   </component>
 </project>
