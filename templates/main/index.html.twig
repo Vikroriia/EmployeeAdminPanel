@@ -10,6 +10,9 @@
 
 <div class="example-wrapper">
     <div>
+        <hi>Employee Admin Panel</hi>
+    </div>
+    <div>
         <table class="table">
             <thead class="thead-dark">
             <tr>
@@ -18,20 +21,98 @@
                 <th scope="col">First Name</th>
                 <th scope="col">Patronymic</th>
                 <th scope="col">Position</th>
+                <th scope="col">Actions
+                    <button type="button" class="btn btn-dark" title="Add new"
+                            data-toggle="modal" data-target="#addNewFormModal">+</button>
+                </th>
             </tr>
             </thead>
             <tbody>
             {% for employee in employees %}
             <tr>
                 <th scope="row">{{ employee.id }}</th>
-                <td>{{ employee.last_name }}</td>
-                <td>{{ employee.first_name }}</td>
-                <td>{{ employee.patronymic }}</td>
-                <td>{{ employee.position_id }}</td>
+                <td>{{ employee.LastName }}</td>
+                <td>{{ employee.FirstName }}</td>
+                <td>{{ employee.Patronymic }}</td>
+                <td>{% for position in positions %}
+                        {% if position.id == employee.Position_id %}
+                            {{ position.Name }}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td>
+                    <a href="" class="btn btn-info">Change</a>
+                    <a href="{{ path('remove_employee', {'employee': employee.id} ) }}" class="btn btn-danger">Delete</a>
+                </td>
             </tr>
             {% endfor %}
             </tbody>
         </table>
     </div>
 </div>
+
+    <!--  Modal form for add new employee -->
+<div class="modal" id="addNewFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">Add new employee</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addNewForm" action="/feedback/process/process.php" enctype="multipart/form-data" novalidate>
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="name" class="control-label">Last name</label>
+                                <input id="name" type="text" name="name" class="form-control" value="" placeholder="Last name" minlength="2" maxlength="30" required="required">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="name" class="control-label">First name</label>
+                                <input id="name" type="text" name="name" class="form-control" value="" placeholder="First name" minlength="2" maxlength="30" required="required">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="name" class="control-label">Patronymic</label>
+                                <input id="name" type="text" name="name" class="form-control" value="" placeholder="Patronymic" minlength="2" maxlength="30" required="required">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="name" class="control-label">Position</label>
+                                <div class="dropdown">
+                                    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Choose position
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        {% for position in positions %}
+                                            <a class="dropdown-item" href="#">{{ position.Name }}</a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="invalid-feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success float-right" disabled="disabled">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
