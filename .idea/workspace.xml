@@ -180,7 +180,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../employee-admin-panel (copy)" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -201,21 +201,21 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="EmployeeType.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/src/Form/EmployeeType.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.EmployeeType.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4f746ee" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4f746ee" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@5864641" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -232,7 +232,9 @@
       <option name="presentableId" value="Default" />
       <updated>1566068868320</updated>
       <workItem from="1566068871926" duration="26950000" />
-      <workItem from="1566328973378" duration="8814000" />
+      <workItem from="1566328973378" duration="21318000" />
+      <workItem from="1566497884886" duration="4117000" />
+      <workItem from="1567625450458" duration="1356000" />
     </task>
     <task id="LOCAL-00001" summary="Add DB_FR for employees(position_id) and new variable Position_id + 2 + 2 functions for it (get and set)">
       <created>1566158805720</created>
@@ -248,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566166098836</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add table view, buttons for actions, action &quot;Delete&quot;, modal form for &quot;Add new&quot;">
+      <created>1566338752034</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566338752034</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +279,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add DB_FR for employees(position_id) and new variable Position_id + 2 + 2 functions for it (get and set)" />
     <MESSAGE value="Add table view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add table view" />
+    <MESSAGE value="Add table view, buttons for actions, action &quot;Delete&quot;, modal form for &quot;Add new&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add table view, buttons for actions, action &quot;Delete&quot;, modal form for &quot;Add new&quot;" />
   </component>
 </project>

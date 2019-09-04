@@ -13,6 +13,11 @@
         <hi>Employee Admin Panel</hi>
     </div>
     <div>
+       {# {{ form_start(formAddNew) }}
+        {{ form_widget(formAddNew) }}
+        {{ form_end(forAddNew) }}#}
+    </div>
+    <div>
         <table class="table">
             <thead class="thead-dark">
             <tr>
@@ -63,52 +68,12 @@
             </div>
             <div class="modal-body">
                 <form id="addNewForm" action="/feedback/process/process.php" enctype="multipart/form-data" novalidate>
-                    <div class="form-row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="name" class="control-label">Last name</label>
-                                <input id="name" type="text" name="name" class="form-control" value="" placeholder="Last name" minlength="2" maxlength="30" required="required">
-                                <div class="invalid-feedback"></div>
-                            </div>
-                        </div>
+                    <div>
+                       {# {{ form_start(formAddNew) }}
+                        {{ form_widget(formAddNew) }}
+                        {{ form_end(forAddNew) }}#}
+                        <button type="submit" class="btn btn-success float-right" disabled="disabled">Add</button>
                     </div>
-                    <div class="form-row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="name" class="control-label">First name</label>
-                                <input id="name" type="text" name="name" class="form-control" value="" placeholder="First name" minlength="2" maxlength="30" required="required">
-                                <div class="invalid-feedback"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="name" class="control-label">Patronymic</label>
-                                <input id="name" type="text" name="name" class="form-control" value="" placeholder="Patronymic" minlength="2" maxlength="30" required="required">
-                                <div class="invalid-feedback"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="name" class="control-label">Position</label>
-                                <div class="dropdown">
-                                    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Choose position
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        {% for position in positions %}
-                                            <a class="dropdown-item" href="#">{{ position.Name }}</a>
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                                <div class="invalid-feedback"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-success float-right" disabled="disabled">Add</button>
                 </form>
             </div>
         </div>
